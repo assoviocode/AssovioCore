@@ -23,9 +23,7 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
-$app->withFacades(true, [
-    'Illuminate\Support\Facades\Mail' => 'Mail',
-]);
+$app->withFacades();
 
 $app->withEloquent();
 
@@ -61,7 +59,7 @@ $app->singleton(
 |
 */
 
-$app->configure('app');
+// $app->configure('app');
 
 /*
 |--------------------------------------------------------------------------

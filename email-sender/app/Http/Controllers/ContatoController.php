@@ -15,8 +15,12 @@ class ContatoController extends Controller
 
     public function send()
     {
-        Mail::to("rodrigo@loopes.com.br")->cc([])
-            ->bcc([])
-            ->send(new EmailContatoSite());
+        try {
+            Mail::to("rodrigo@loopes.com.br")->cc([])
+                ->bcc([])
+                ->send(new EmailContatoSite());
+        } catch (\Exception $e) {
+            echo ($e);
+        }
     }
 }
