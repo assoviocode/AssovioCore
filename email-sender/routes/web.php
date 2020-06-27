@@ -18,3 +18,5 @@ $router->get('/', function () use ($router) {
 });
 
 $router->post('/api/contato', 'ContatoController@store');
+$router->get('/api/contato', 'ContatoController@send');
+
