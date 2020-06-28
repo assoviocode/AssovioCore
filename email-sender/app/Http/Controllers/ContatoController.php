@@ -1,26 +1,37 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\ContatoSite;
+use App\ContactWebsite;
+use App\Mail\EmailContactWebSite;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\EmailContatoSite;
 
 class ContatoController extends Controller
 {
 
     public function __construct()
     {
-        $this->classModel = ContatoSite::class;
+        $this->classModel = ContactWebsite::class;
     }
 
     public function send()
     {
-        try {
-            Mail::to("rodrigo@loopes.com.br")->cc([])
-                ->bcc([])
-                ->send(new EmailContatoSite());
-        } catch (\Exception $e) {
-            echo ($e);
+        $contactsToSend = ContactWebsite::where('sent', false)->get();
+
+        if (is_null($contactsToSend) || count($contactsToSend) == 0) {
+            return response()->json([
+                'message' => 'Não há contato a ser enviado!'
+            ], 200);
+        }
+
+        foreach ($contactsToSend as $contact) {
+            try {
+                $email = $contact->client->email;
+                Mail::to($email)->send(new EmailContactWebSite());
+                $contact->setSent(true);
+                $contact->save();
+            } catch (\Exception $e) {
+                echo ($e);
+            }
         }
     }
 }

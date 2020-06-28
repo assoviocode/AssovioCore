@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCoreContatoSiteTable extends Migration
+class CreateContactWebsiteTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateCoreContatoSiteTable extends Migration
      */
     public function up()
     {
-        Schema::create('core_contato_site', function (Blueprint $table) {
-            $table->id();
+        Schema::create('contact_website', function (Blueprint $table) {
+            $table->id('id');
             $table->string('email')->nullable(false);
             $table->string('phone');
             $table->string('subject')->nullable(false);
@@ -31,6 +31,6 @@ class CreateCoreContatoSiteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('core_contato_site');
+        Schema::dropIfExists('contact_website');
     }
 }
