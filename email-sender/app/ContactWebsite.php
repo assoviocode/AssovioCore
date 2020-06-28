@@ -21,8 +21,8 @@ class ContactWebsite extends Model
         return $this->belongsTo('App\Client');
     }
     
-    public function setSentAttribute(bool $value){
-        $this->sent = $value;
+    public function setSentAttribute(bool $sent){
+        $this->attributes['sent'] = $sent;
     }
 }
 
