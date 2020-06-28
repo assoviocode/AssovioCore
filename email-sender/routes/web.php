@@ -17,6 +17,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->post('/api/contato', 'ContatoController@store');
-$router->get('/api/contato', 'ContatoController@send');
+$router->post('/api/contato', 'ContactWebsiteController@store');
+$router->get('/api/contato', 'ContactWebsiteController@send');
 
