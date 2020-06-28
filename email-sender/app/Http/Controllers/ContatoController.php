@@ -27,7 +27,7 @@ class ContatoController extends Controller
             try {
                 $email = $contact->client->email;
                 Mail::to($email)->send(new EmailContactWebSite());
-                $contact->setSent(true);
+                $contact->sent = true;
                 $contact->save();
             } catch (\Exception $e) {
                 echo ($e);
