@@ -71,6 +71,7 @@ return [
      */
     
     'encryption' => env('MAIL_ENCRYPTION'),
+    'smtpSecure' => env('MAIL_SMTP_SECURE'),
     
     /*
      |--------------------------------------------------------------------------
