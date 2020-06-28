@@ -19,7 +19,7 @@ class ContatoController extends Controller
 
         if (is_null($contactsToSend) || count($contactsToSend) == 0) {
             return response()->json([
-                'message' => 'Não há contato a ser enviado!'
+                'message' => 'NÃ£o hÃ¡ emails a serem enviados!'
             ], 200);
         }
 
@@ -30,7 +30,6 @@ class ContatoController extends Controller
                 $contact->sent = true;
                 $contact->save();
             } catch (\Exception $e) {
-                // Gerar log
                 echo ($e);
             }
         }
