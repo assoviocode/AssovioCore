@@ -30,8 +30,11 @@ class ContatoController extends Controller
                 $contact->sent = true;
                 $contact->save();
             } catch (\Exception $e) {
+                // Gerar log
                 echo ($e);
             }
         }
+        
+        return response()->json();
     }
 }
