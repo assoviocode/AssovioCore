@@ -28,7 +28,7 @@ class ContactWebsiteController extends Controller
         foreach ($contactsToSend as $contact) {
             try {
                 $email = $contact->client->email;
-                Mail::to($email)->send(new EmailContactWebSite());
+                Mail::to($email)->send(new EmailContactWebSite($contact));
                 $contact->sent = true;
                 $contact->save();
                 $successfullySent++;
@@ -39,7 +39,7 @@ class ContactWebsiteController extends Controller
         
         return response()->json([
             'message' => 'Emails enviados com sucesso!',
-            'quantity_successfully_sent' => $successfullySent
+            'quantity' => $successfullySent
         ]);
     }
 }

@@ -1,3 +1,8 @@
 <div>
-    <h1>Email Teste via Lumen</h1>
+    <h4>Contato pelo Site</h4>
+    <p>Nome: {{name}}</p>
+    <p>E-mail: {{$contact->email}}</p>
+    <p>Telefone: {{$contact->phone}}</p>
+    <p>Assunto: {{$contact->subject}}</p>
+    <p>Mensagem: {{$contact->message}}</p>
 </div>
