@@ -9,6 +9,7 @@ class ContactWebsite extends Model
     protected $table = 'contact_website';
 
     protected $fillable = [
+        'name',
         'email',
         'phone',
         'subject',
