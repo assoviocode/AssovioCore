@@ -1,6 +1,6 @@
 <div>
     <h4>Contato pelo Site</h4>
-    <p>Nome: {{name}}</p>
+    <p>Nome: Rodrigo Augusto Benedicto</p>
     <p>E-mail: {{$contact->email}}</p>
     <p>Telefone: {{$contact->phone}}</p>
     <p>Assunto: {{$contact->subject}}</p>
