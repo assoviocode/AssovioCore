@@ -35,7 +35,7 @@ class ContactWebsiteController extends Controller
         
         $request['client_id'] = $client->id;
         
-        parent::store($request);       
+        return parent::store($request);       
         
     }
 
