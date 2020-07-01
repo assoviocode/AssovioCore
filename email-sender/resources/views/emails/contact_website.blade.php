@@ -7,6 +7,6 @@
 	<p>Mensagem: {{$contact->message}}</p>
 	
 	<p>Nome: {{$contact->client->name}}</p>
-	<p>Site: {{$contact->client->urlSite}}</p>
-	<p>Logo: {{$contact->client->urlLogo}}</p>
+	<p>Site: {{$contact->client->url_site}}</p>
+	<p>Logo: {{$contact->client->url_logo}}</p>
 </div>
