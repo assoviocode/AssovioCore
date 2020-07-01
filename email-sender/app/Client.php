@@ -10,7 +10,9 @@ class Client extends Model
     protected $fillable = [
         'name',
         'email',
-        'key'
+        'key',
+        'url_site',
+        'url_logo'
     ];
     
     public function getEmailAttribute() {
