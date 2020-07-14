@@ -16,7 +16,7 @@ class MailForgotPassword extends MailBrancoAdv
 
     public function build()
     {
-        return $this->from(env('MAIL_FROM_ADDRESS'), $this->fromName)->view('emails.cbrancoadv.forgot_password');
+        return $this->from(env('MAIL_FROM_ADDRESS'), $this->fromName)->subject('Redefinição de Senha')->view('emails.cbrancoadv.forgot_password');
     }
 }
 
