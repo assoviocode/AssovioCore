@@ -10,7 +10,7 @@
 @stop
 
 @section('button')
-	<a class="mcnButton " title="Site" href="https://client.brancoadvogadosassociados.com.br/app/reset-password/{{ $token }}" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">Clique aqui para Redefinir Senha</a>
+	<a class="mcnButton " title="Site" href="https://client.brancoadvogadosassociados.com.br/app/change-password/{{ $token }}" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">Clique aqui para Redefinir Senha</a>
 @stop
 
 
