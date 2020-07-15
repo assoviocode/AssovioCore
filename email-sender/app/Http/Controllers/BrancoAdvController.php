@@ -14,10 +14,10 @@ class BrancoAdvController extends BaseController
         $this->validate($request, [
             'client_name' => 'required|max:255',
             'email' => 'required|email',
-            'token' => 'required|max:255'
+            'link_button' => 'required|max:255'
         ]);
 
-        Mail::to($request->email)->send(new MailForgotPassword($request->token, $request->client_name));
+        Mail::to($request->email)->send(new MailForgotPassword($request->link_button, $request->client_name));
 
         return response()->json([
             'message' => 'Email enviado com sucesso!'

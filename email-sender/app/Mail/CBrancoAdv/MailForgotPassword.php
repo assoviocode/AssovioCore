@@ -4,13 +4,13 @@ namespace App\Mail\CBrancoAdv;
 class MailForgotPassword extends MailBrancoAdv
 {
 
-    public $token;
+    public $linkButton;
 
     public $clientName;
 
-    public function __construct(string $token, string $clientName)
+    public function __construct(string $linkButton, string $clientName)
     {
-        $this->token = $token;
+        $this->linkButton = $linkButton;
         $this->clientName = $clientName;
     }
 
