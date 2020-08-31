@@ -39,4 +39,12 @@ class Client extends Model
     public function setEmailFolder(string $email) {
         $this->attributes['mail_folder'] = $email;
     }
+    
+    public function getUrlSite() {
+        return $this->attributes['url_site'];
+    }
+    
+    public function setUrlSite(string $urlSite) {
+        $this->attributes['url_site'] = $urlSite;
+    }
 }
