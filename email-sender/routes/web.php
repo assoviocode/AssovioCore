@@ -22,9 +22,18 @@ $router->get('/api/contato', 'ContactWebsiteController@send');
 $router->group([
     'prefix' => 'api'
 ], function () use ($router) {
+    
     $router->group([
         'prefix' => 'branco-adv'
     ], function () use ($router) {
         $router->post('forgot-password', 'BrancoAdvController@sendForgotPassword');
-    });
+    });    
+});
+
+$router->group([
+    'prefix' => 'v1',
+    'middleware' => 'auth'
+], function () use ($router) {
+    $router->post('register', 'RegisterController@send');
+    $router->post('forgot-password', 'ForgotPasswordController@send');
 });
