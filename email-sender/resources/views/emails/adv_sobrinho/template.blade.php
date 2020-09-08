@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="http://development.gruposobrinhoadvogados.kinghost.net/front-sistema/email/img/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="{{$client->getUrlSite()}}/public/img/favicon.ico">
     <title>E-mail - Grupo Sobrinho Advogados</title>
     <style type="text/css">
       p {
@@ -466,8 +466,8 @@
                                         <tbody>
                                           <tr>
                                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
-                                              <a href="http://development.gruposobrinhoadvogados.kinghost.net/" title="Grupo Sobrinho Advogados" class="" target="_blank">
-                                              <img align="center" alt="Grupo Sobrinho Advogados" src="http://development.gruposobrinhoadvogados.kinghost.net/front-sistema/email/img/logo.png" width="240px" style="max-width: 240px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                              <a href="{{$client->getUrlSite()}}" title="Grupo Sobrinho Advogados" class="" target="_blank">
+                                              <img align="center" alt="Grupo Sobrinho Advogados" src="{{$client->getUrlSite()}}/public/assets/img/email/logo.png" width="240px" style="max-width: 240px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                               </a>
                                             </td>
                                           </tr>
@@ -611,7 +611,7 @@
                                                                                       <tbody>
                                                                                         <tr>
                                                                                           <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                            <a href="https://www.facebook.com" target="_blank"><img src="http://development.gruposobrinhoadvogados.kinghost.net/front-sistema/email/img/facebook.png" alt="Facebook" style="display:block;" height="24" width="24" class=""></a>
+                                                                                            <a href="https://www.facebook.com" target="_blank"><img src="{{$client->getUrlSite()}}/public/assets/img/email/facebook.png" alt="Facebook" style="display:block;" height="24" width="24" class=""></a>
                                                                                           </td>
                                                                                         </tr>
                                                                                       </tbody>
@@ -642,7 +642,7 @@
                                                                                       <tbody>
                                                                                         <tr>
                                                                                           <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                            <a href="https://www.instagram.com/" target="_blank"><img src="http://development.gruposobrinhoadvogados.kinghost.net/front-sistema/email/img/instagram.png" alt="Instagram" style="display:block;" height="24" width="24" class=""></a>
+                                                                                            <a href="https://www.instagram.com/" target="_blank"><img src="{{$client->getUrlSite()}}/public/assets/img/email/instagram.png" alt="Instagram" style="display:block;" height="24" width="24" class=""></a>
                                                                                           </td>
                                                                                         </tr>
                                                                                       </tbody>
@@ -673,7 +673,7 @@
                                                                                       <tbody>
                                                                                         <tr>
                                                                                           <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                            <a href="https://www.youtube.com" target="_blank"><img src="http://development.gruposobrinhoadvogados.kinghost.net/front-sistema/email/img/youtube.png" alt="Youtube" style="display:block;" height="24" width="24" class=""></a>
+                                                                                            <a href="https://www.youtube.com" target="_blank"><img src="{{$client->getUrlSite()}}/public/assets/img/email/youtube.png" alt="Youtube" style="display:block;" height="24" width="24" class=""></a>
                                                                                           </td>
                                                                                         </tr>
                                                                                       </tbody>

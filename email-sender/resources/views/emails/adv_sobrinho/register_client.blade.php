@@ -1,7 +1,7 @@
 @extends('emails.adv_sobrinho.template')
 
 @section('banner')
-	<img align="center" title="Grupo Sobrinho Advogados" alt="Capa" src="http://development.gruposobrinhoadvogados.kinghost.net/front-sistema/email/img/default.jpg" width="564" style="max-width:564px; padding-bottom: 0; display: inline !important; vertical-align: bottom; margin-bottom: 10px;" class="mcnImage">
+	<img align="center" title="Grupo Sobrinho Advogados" alt="Capa" src="{{$client->getUrlSite()}}/public/assets/img/email/default.jpg" width="564" style="max-width:564px; padding-bottom: 0; display: inline !important; vertical-align: bottom; margin-bottom: 10px;" class="mcnImage">
 @stop
 
 @section('content')
