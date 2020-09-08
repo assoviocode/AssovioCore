@@ -20,7 +20,7 @@ class EmailForgotPassword extends Mailable
 
     public function build()
     {
-        return $this->from(env('MAIL_FROM_ADDRESS'), $this->client->getName())->subject('Confirmação de Cadastro')->view('emails.'.$this->client->getEmailFolder().'.forgot_password');
+        return $this->from(env('MAIL_FROM_ADDRESS'), $this->client->getName())->subject('Redefinição de Senha')->view('emails.'.$this->client->getEmailFolder().'.forgot_password');
     }
     
 }
